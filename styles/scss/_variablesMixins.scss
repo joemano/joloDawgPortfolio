@@ -1,0 +1,32 @@
+$backgroundPrimary: #131313;
+$backgroundSecondary: #C54A1A;
+
+$primaryText: #F8F8F8;
+
+$accent: #FFD700;
+
+$headerFont: 'Lato', sans-serif;
+$primaryFont: 'Raleway', sans-serif;
+
+$aHoverFocus: 'a:hover, a:focus';
+
+// Mixins
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Taken from @site https://codepen.io/dbox/pen/meaMba (Mixin Fluid Type)
+@mixin fluidType($minFontSize: 12px, $maxFontSize: 21px, $lowerRange: 420px, $upperRange: 900px) {
+
+  font-size: calc(#{$minFontSize} + #{(($maxFontSize / ($maxFontSize * 0 + 1)) - ($minFontSize / ($minFontSize * 0 + 1)))} * ((100vw - #{$lowerRange}) / #{(($upperRange / ($upperRange * 0 + 1)) - ($lowerRange / ($lowerRange * 0 + 1)))}));
+
+  @media screen and (max-width: $lowerRange) {
+      font-size: $minFontSize;
+  }
+
+  @media screen and (min-width: $upperRange) {
+      font-size: $maxFontSize;
+  }
+}

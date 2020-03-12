@@ -234,3 +234,59 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #131313;
+  font-size: calc(1.6rem + 0.4 * ((100vw - 320px) / 960));
+  color: #F8F8F8;
+  font-family: "Raleway", sans-serif;
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 2rem;
+  }
+}
+
+h1, h2, h3 {
+  font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, ul, p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #F8F8F8;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #FFD700;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}

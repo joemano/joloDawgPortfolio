@@ -1,8 +1,8 @@
 const joloPortfolio = {};
 
-const devToApiKey = 'Pdeaq3Sioao7t5CzjKfajjNT';
+joloPortfolio.blogPosts = [];
 
-joloPortfolio.getPosts = () => {
+joloPortfolio.getPosts = function() {
   $.ajax({
     url: 'https://dev.to/api/articles',
     method: 'GET',
@@ -11,7 +11,8 @@ joloPortfolio.getPosts = () => {
       username: 'joemano'
     }
   }).then((response) => {
-    console.log(response);
+    this.blogPosts = response;
+    console.log(this.blogPosts);
   });
 }
 

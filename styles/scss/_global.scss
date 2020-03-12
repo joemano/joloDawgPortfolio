@@ -1,0 +1,43 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $backgroundPrimary;
+  @include fluidType (1.6rem, 2rem, 320px, 1280px);
+  color: $primaryText;
+  font-family: $primaryFont;
+}
+
+h1, h2, h3 {
+  font-family: $headerFont;
+}
+
+h1, h2, h3, ul, p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;;
+}
+
+a {
+  color: $primaryText;
+  text-decoration: none;
+}
+
+#{$aHoverFocus} {
+  color: $accent;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
